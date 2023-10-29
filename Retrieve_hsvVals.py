@@ -2,13 +2,13 @@ import cv2
 import cvzone
 from cvzone.ColorModule import ColorFinder
 
-cap = cv2.VideoCapture('Videos/vid (8).mp4')
+cap = cv2.VideoCapture('Videos/vid (4).mp4')
 myColorFinder = ColorFinder(True)
 hsvVals = 'red'
 while True:
     # Assigning the Video/Image to be process
     success, img = cap.read()
-    img = cv2.imread("Ball2.png")
+    img = cv2.imread("Ball.png")
 
     imgColor, mask = myColorFinder.update(img, hsvVals)
 

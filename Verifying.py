@@ -6,12 +6,12 @@ import numpy as np
 import math
 
 # cap = cv2.VideoCapture('Videos/vid (4).mp4')
-cap = cv2.VideoCapture('Videos/vid (8).mp4') # initializing the captured video
+cap = cv2.VideoCapture('Videos/vid (4).mp4') # initializing the captured video
 
 # Assigning the found colour of the ball
 myColorFinder = ColorFinder(False)
 
-hsvVals = {'hmin': 18, 'smin': 73, 'vmin': 98, 'hmax': 26, 'smax': 255, 'vmax': 255}
+hsvVals = {'hmin': 5, 'smin': 89, 'vmin': 112, 'hmax': 16, 'smax': 255, 'vmax': 255}
 
 while True:
     success, img = cap.read()
