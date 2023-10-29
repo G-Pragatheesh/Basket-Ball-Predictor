@@ -6,10 +6,12 @@ import numpy as np
 import math
 
 """
-# Libraries written for checking the parameters of the execution of the code
+
+Libraries written for checking the parameters of the execution of the code
 import Verifying
 import Retrieve_hsvVals
 import Access_WebCam
+
 """
 
 cap = cv2.VideoCapture('Videos/vid (4).mp4')  # initializing the captured video
