@@ -14,11 +14,11 @@ import Access_WebCam
 
 """
 
-cap = cv2.VideoCapture('Videos/vid (1).mp4')  # initializing the captured video
+cap = cv2.VideoCapture('Videos/vid (8).mp4')  # initializing the captured video
 
 # Assigning the found colour of the ball
 myColorFinder = ColorFinder(False)
-hsvVals = {'hmin': 5, 'smin': 89, 'vmin': 112, 'hmax': 16, 'smax': 255, 'vmax': 255}
+hsvVals = {'hmin': 16, 'smin': 103, 'vmin': 115, 'hmax': 26, 'smax': 255, 'vmax': 255}
 
 # Creating empty list to hold the positions of the ball in space time
 posListX = []
@@ -58,10 +58,10 @@ while True:
         for x in Xlist:
             y = int(a * x ** 2 + b * x + c)
             cv2.circle(imgContour, (x, y), 1, (255, 0, 255), cv2.FILLED)  # Drawing the predicted path
-        if len(posListX) < 10:
+        if len(posListX) < 6:
             c = c - 596
             x = int((-b - math.sqrt((b ** 2) - (4 * a * c))) / (2 * a))
-            prediction = 326 < x < 430
+            prediction = 50 < x < 650
 
         # Final prediction
         if prediction:
@@ -77,4 +77,4 @@ while True:
     imgContour = cv2.resize(imgContour, (0, 0), None, 0.6, 0.6)
     # cv2.imshow("Image", img)
     cv2.imshow("ImageColor", imgContour)
-    cv2.waitKey(70)
+    cv2.waitKey(50)
