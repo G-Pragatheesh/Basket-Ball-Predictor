@@ -14,7 +14,7 @@ import Access_WebCam
 
 """
 
-cap = cv2.VideoCapture('Videos/vid (4).mp4')  # initializing the captured video
+cap = cv2.VideoCapture('Videos/vid (1).mp4')  # initializing the captured video
 
 # Assigning the found colour of the ball
 myColorFinder = ColorFinder(False)
