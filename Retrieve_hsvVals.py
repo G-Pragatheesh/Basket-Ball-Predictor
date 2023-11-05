@@ -8,7 +8,7 @@ hsvVals = 'red'
 while True:
     # Assigning the Video/Image to be process
     success, img = cap.read()
-    img = cv2.imread("Ball2.png")
+    img = cv2.imread("Ball2.png") 
 
     imgColor, mask = myColorFinder.update(img, hsvVals)
 

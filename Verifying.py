@@ -6,7 +6,7 @@ import numpy as np
 import math
 
 # cap = cv2.VideoCapture('Videos/vid (4).mp4')
-cap = cv2.VideoCapture('Videos/vid (8).mp4') # initializing the captured video
+cap = cv2.VideoCapture('Videos/vid (8).mp4') # initializing the captured video 
 
 # Assigning the found colour of the ball
 myColorFinder = ColorFinder(False)
