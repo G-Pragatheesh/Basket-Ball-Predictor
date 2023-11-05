@@ -13,11 +13,11 @@ while True:
     imgColor, mask = myColorFinder.update(img, hsvVals)
 
     img = img[0:, :]  # Cropping
-    imgColor = imgColor[:, :]
+    imgColor = imgColor[:,600:5000]
 
     # Displaying the Final Output
     img = cv2.resize(img, (0, 0), None, 0.6, 0.6)  # Resizing
-    imgColor = cv2.resize(imgColor, (0, 0), None, 0.4, 0.4)  # Resizing
+    imgColor = cv2.resize(imgColor, (0, 0), None, 0.3, 0.3)  # Resizing
     cv2.imshow("Image", img)
     cv2.imshow("ImageColour", imgColor)
     cv2.waitKey(100)
